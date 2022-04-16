@@ -20,6 +20,8 @@ function App() {
 
       <Greeting isLoggedIn={true} />
 
+      <LoginControl />
+
      
     </>
     
