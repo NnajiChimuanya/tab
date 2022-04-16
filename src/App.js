@@ -24,6 +24,8 @@ function App() {
 
       <ControlledForm />
 
+      <ControlledTextarea />
+
      
     </>
     
