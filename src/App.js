@@ -6,6 +6,7 @@ import LoginControl from "./LoginControl";
 import ControlledForm from "./components/ControlledForm";
 import ControlledTextarea from "./components/ControlledTextarea";
 import ControlledSelect from "./components/ControlledSelect";
+import UseState from "./components/UseState";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
       <ControlledTextarea />
 
       <ControlledSelect />
+
+      <UseState />
 
      
     </>
