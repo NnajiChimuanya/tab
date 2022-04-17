@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-function UseState() {
+
+function UseEffect() {
     var [count, setCount] = useState(0)
     var [fruit, setFruit] = useState("")
+
+    useEffect(() => {
+        document.title = `You clicked that buttton ${count} times`
+    })
 
     return(
         <>
@@ -20,4 +25,4 @@ function UseState() {
     )
 }
 
-export default UseState;
+export default UseEffect;
