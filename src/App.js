@@ -1,43 +1,34 @@
-import Navbar from "./components/Navbar";
-import Form from "./components/Form";
-import Toggle from "./components/Toggle";
-import Greeting from "./components/Greeting";
-import LoginControl from "./LoginControl";
-import ControlledForm from "./components/ControlledForm";
-import ControlledTextarea from "./components/ControlledTextarea";
-import ControlledSelect from "./components/ControlledSelect";
-import UseState from "./components/UseState";
-import UseEffect from "./components/UseEffect";
+import React, { useState, useEffect } from 'react';
+
+
+const url = "https://course-api.com/react-tabs-project"
 
 function App() {
-  return (
-    <>
-      <div className="App">
-        <Navbar />
-      </div>
 
-      <Form />
+  const [loading, setLoading] = useState(true)
+  const [jobs, setJobs] = useState([])
+  const [value, setValue] = useState(0)
 
-      <Toggle />
+  const api = async () => {
+    let data = await fetch(url)
+    let json = await data.json()
+    setJobs(json)
+    setLoading(false)
+  }
 
-      <Greeting isLoggedIn={true} />
+  useEffect(() => {
+    api()
+  }, [])
 
-      <LoginControl />
+  if(loading) {
+    return <h1>Loading...</h1>
+  }
 
-      <ControlledForm />
+  return <div>
+    Jobs
+  </div>
 
-      <ControlledTextarea />
 
-      <ControlledSelect />
-
-      <UseState />
-
-      <UseEffect />
-
-     
-    </>
-    
-  );
 }
 
 export default App;
