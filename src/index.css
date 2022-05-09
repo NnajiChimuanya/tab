@@ -48,6 +48,7 @@ body {
 .jobButton:hover {
     color: #2caeba;
     box-shadow: 0 2px #2caeba;
+    transform: scale(1.23);
 }
 .activeButton {
     color: #2caeba;
@@ -90,6 +91,20 @@ p.job-date {
     font-family: 'Mako', sans-serif;
 }
 
+.more {
+    display: flex;
+    justify-content: center;
+}
+
+.more button {
+    color: white;
+    background-color: #2caeba;
+    border-color: transparent;
+}
+
+.more button:focus {
+    outline: none;
+}
 
 
 

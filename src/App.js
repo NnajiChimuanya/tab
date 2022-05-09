@@ -56,7 +56,12 @@ function App() {
               )
             })
           }
+
+          <div className='more'>
+            <button>More Info</button>
+          </div>
         </div>
+        
       </div>
   </div>
   </div>
